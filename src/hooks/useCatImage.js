@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { CAT_IMAGE_PREFIX } from '../constants'
 
 export function useCatImage ({ fact }) {
   const [image, setImage] = useState()
@@ -15,5 +16,5 @@ export function useCatImage ({ fact }) {
       })
   }, [fact])
 
-  return { image }
+  return { image: `${CAT_IMAGE_PREFIX}${image}` }
 }

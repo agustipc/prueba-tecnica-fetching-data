@@ -1,4 +1,3 @@
-import { CAT_IMAGE_PREFIX } from './constants'
 import { useCatImage } from './hooks/useCatImage.js'
 import { useCatFact } from './hooks/useCatFact'
 import './App.css'
@@ -16,7 +15,7 @@ export function App () {
       <h1>Random Cat App</h1>
       <button onClick={handleClick}>NEW FACT</button>
       {fact && <p>{fact}</p>}
-      {image && <img src={`${CAT_IMAGE_PREFIX}${image}`} alt={`image extracted using the first three words for ${fact}`} />}
+      {image && <img src={image} alt={`image extracted using the first three words for ${fact}`} />}
     </main>
   )
 }
